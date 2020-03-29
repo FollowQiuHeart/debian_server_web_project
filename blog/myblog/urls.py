@@ -21,6 +21,7 @@ urlpatterns = [
     path('search/', Search.as_view(), name='search'),     # 全局搜索处理
     path('tag/<int:id>/', Tagcloud.as_view(), name='tag'),   # 标签云
     path('login/',Login.as_view(),name='login'), #登录界面
+    path('sms_login/',SmsLogin.as_view(),name="sms_login"), #短信登录界面
     path('register/', Register.as_view(), name='register'),  # 登录界面
     # url("^login$",views.login_view,name="login_view"),
     url('^check_status/$', views.check_status, name='check_status'), #检测状态

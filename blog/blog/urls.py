@@ -29,7 +29,7 @@ urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # django-jet 路由
     path('admin/', admin.site.urls),    # 后台管理系统
     path('', views.Index.as_view(), name='index'),   # 首页
-    path('blog/', include(('myblog.urls', 'myblog'), namespace='myblog')),  # 定义二级路由
+    path('blog/', include(('myblog.urls', 'myblog'), namespace='blog')),  # 定义二级路由
     # url(r'^admin/', admin.site.urls),
     # url(r"test/",views.test),
     # http://127.0.0.1:8000/v1/user
